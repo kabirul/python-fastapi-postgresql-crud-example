@@ -34,8 +34,6 @@ async def shutdown():
 
 @app.get("/")
 def read_root():
-    return {"This is first Python FastAPI Demo"}
-
-#app.include_router(api_router,prefix="/api")
+    return {"This is Python FastAPI blog application"}
 
 app.include_router(blogs.router, prefix="/api/blogs", tags=["blogs"])
